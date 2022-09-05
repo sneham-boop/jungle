@@ -11,6 +11,15 @@
         We have a wide variety of plants and flowers available for purchase on our website. Whether you're looking for something small and delicate or big and bold, we have the perfect plant for you. We also carry a selection of accessories, including potting soil, pots and containers, watering cans, and more.
       </p>
     </div>
+
+    <section class="intro">
+      <p><% if current_user %>
+      Signed in as <%= current_user.email %> | <%= link_to "Logout", logout_path %>
+        <% else %>
+      <%= link_to "Login", login_path %> | <%= link_to "Signup", signup_path(@visitors) %>
+      <% end %> </p>
+      <%= yield %>
+    </section>
   </header>
 
   <div class="products">
