@@ -42,6 +42,13 @@
             <% end %>
           <%# </ul>
         </li> %>
+        <% if current_user %>
+        <li class="nav-item"><a class="nav-link"> Signed in as <%= current_user.email %></a></li>
+        <li class="nav-item"><a href="<%=logout_path%>" class="nav-link">Logout</a></li>
+        <% else %>
+        <li class="nav-item"><a href="<%=signup_path%>" class="nav-link">Signup</a></li>
+        <li class="nav-item"><a href="<%=login_path%>" class="nav-link">Login</a></li>
+        <% end %>
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item dropdown">

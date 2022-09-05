@@ -1,19 +1,5 @@
 <section class="products-index">
   <header class="page-header">
-  <section id="user_authentication" class="intro">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">User Authentication</h5>
-          <% if current_user %>
-          <p class="mb-3"> Signed in as <%= current_user.email %> </p>  <a href="<%=logout_path%>" class="btn btn-primary">Logout</a>
-          <% else %>
-          <p class="card-text">Login or create a new account to access discounts and hidden plants!</p>
-          <a href="<%=login_path%>" class="btn btn-primary">Login</a> <a href="<%=signup_path%>" class="btn btn-primary">Signup</a>
-          <% end %>
-          <%= yield %>
-        </div>
-      </div>
-    </section>
     <br>
     <div class="intro">
       <p>
