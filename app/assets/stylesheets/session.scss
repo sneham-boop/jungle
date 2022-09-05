@@ -1,3 +1,28 @@
 // Place all the styles related to the session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+form[action='login'] {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 30rem;
+}
+
+form[action='login'] input {
+  margin-bottom: 20px;
+}
+
+form[action='login'] input[type='submit'] {
+background-color: #0d6efd;
+border: #0d6efd;
+color: white;
+border-radius: 0.25rem;
+}
+
+form[action='login'] input[type='submit']:hover {
+transition: 0.3s;
+background-color: #0b5ed7;
+}

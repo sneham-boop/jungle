@@ -1,3 +1,26 @@
 // Place all the styles related to the user controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+form[action='visitor_path'] {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 30rem;
+}
+
+form[action='visitor_path'] input {
+  margin-bottom: 20px;
+}
+
+form[action='visitor_path'] input[type='submit'] {
+background-color: #0d6efd;
+border: #0d6efd;
+color: white;
+border-radius: 0.25rem;
+}
+
+form[action='visitor_path'] input[type='submit']:hover {
+transition: 0.3s;
+background-color: #0b5ed7;
+}
