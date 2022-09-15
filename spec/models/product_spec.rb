@@ -59,6 +59,6 @@ RSpec.describe Product, type: :model do
       expect(product.errors.full_messages).to raise_error("ActiveRecord::RecordInvalid:
       Validation failed: Quantity can't be blank")
     end
-
+ 
   end
 end

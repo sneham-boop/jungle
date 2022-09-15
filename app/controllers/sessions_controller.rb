@@ -4,13 +4,21 @@ class SessionsController < ApplicationController
   end
 
   def create
-    visitor = Visitor.find_by_email(params[:email])
-    if visitor && visitor.authenticate(params[:password])
-      session[:visitor_id] = visitor.id
-      redirect_to root_path
-    else
-      redirect_to login_path
-    end
+    # visitor = Visitor.find_by_email(params[:email])
+    # if visitor && visitor.authenticate(params[:password])
+    #   session[:visitor_id] = visitor.id
+    #   redirect_to root_path
+    # else
+    #   redirect_to login_path
+    # end
+      
+      if visitor = Visitor.authenticate_with_credentials(params[:email], params[:password])
+        session[:visitor_id] = visitor.id
+        redirect_to root_path
+      else
+        redirect_to login_path
+      end
+
   end
 
   def destroy

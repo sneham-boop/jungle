@@ -14,6 +14,7 @@ class VisitorsController < ApplicationController
     end
   end  
 
+
   private
 
   def visitor_params
